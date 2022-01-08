@@ -286,36 +286,27 @@ a {
   .header-content .title p {
     font-size: 15px;
   }
-  .header .wave {
-    position: relative;
-    height: 35%;
-    top: 60px
-  }
-  .header .groups {
-    position: relative;
-    top: -195px;
-  }
   .header .groups .group {
     padding: 8px;
     border: 5px solid white;
   }
   .header .groups .g1 {
-    top: 0;
+    top: 10px;
   }
   .header .groups .g2 {
-    top: 10px
-  }
-  .header .groups .g3 {
     top: 20px
   }
+  .header .groups .g3 {
+    top: 30px
+  }
   .header .groups .g4 {
-    top: 40px
+    top: 30px
   }
   .header .groups .g5 {
-    top: 50px
+    top: 20px
   }
   .header .groups .g6 {
-    top: 60px
+    top: 10px
   }
 }
 /* .header-content .title button:hover .g1 {
