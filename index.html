@@ -1,0 +1,375 @@
+<!-- <?php
+
+  // check if user coming from a request
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // assign variables
+    $user = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $mobile = filter_var($_POST['mobile'], FILTER_SANITIZE_NUMBER_INT);
+    $msg = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+
+    // creat array of errors
+    $formErrors = array();
+    if (strlen($user) <= 3) {
+      $formErrors[] = '<i class="far fa-times-circle"></i>User name must be larger than 3 characters.';
+    }
+    if (strlen($mail) == '') {
+      $formErrors[] = '<i class="far fa-times-circle"></i>E-mail can not be empty.';
+    }
+    if (strlen($msg) < 10) {
+      $formErrors[] = '<i class="far fa-times-circle"></i>Message can not be less than 10 characters.';
+    }
+
+    // if no Error send to email
+    $headers = 'Form: ' . $mail . '\r\n';
+    $to = 'marwanellsayed@gmail.com';
+    $subject = 'Contact Form';
+
+    if (empty($formErrors)) {
+      mail($to, $subject, $msg, $headers);
+
+      $user = '';
+      $mail = '';
+      $mobile = '';
+      $msg = '';
+
+      $success = '<div class="success">Thanks For Reaching Us</div>';
+    }
+  }
+?> -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="imgs/logo.png">
+    <title>Mountain Groups</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootStrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- googleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- start header -->
+      <div class="header">
+        <div class="overlay">
+
+        </div>
+        <!-- start navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt="company logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#our-vision">Our Vision</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#our-services">Our Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#our-values">Our Values</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- end navbar -->
+        <!-- start header content -->
+          <div class="header-content">
+              <div class="title">
+                <h1>Mountain Groups</h1>
+                <p>Mountain Group was established in 2021 to become the mother company of some companies in various industrial and service fields, Mountain Group seeks to provide the best quality of services provided to the Egyptian market and the Middle East at the most appropriate prices commensurate with the needs of the market and we seek the best teamwork to achieve the group's future vision.</p>
+                <button type="button" name="button"><a href="#about-us">Read More</a></button>
+              </div>
+
+              <!-- <div class="header-links row">
+                <ul class="g1 col-lg-2">
+                  <li><a href="pages/hr-consultancy.html"><img src="imgs\logo.4.png" alt="HR-consultaion-logo"></a></li>
+                </ul>
+                <ul class="g2 col-lg-2">
+                  <li><a href="pages/mining-services.html"><img src="imgs\logo.6 (2).png" alt="Mining-Services-logo"></a></li>
+                </ul>
+                <ul class="g3 col-lg-2">
+                  <li><a href="pages/advertising.html"><img src="imgs\logo.3 (2).png" alt="Advertising-logo"></a></li>
+                </ul>
+                <ul class="g4 col-lg-2">
+                  <li><a href="pages/facilitymanagment.html"><img src="imgs\logo.1 (2).png" alt="Facility-Managment"></a></li>
+                </ul>
+                <ul class="g5 col-lg-2">
+                  <li><a href="pages/generalsupplies.html"><img src="imgs\logo.5 (2).png" alt="General-Supplies"></a></li>
+                </ul>
+                <ul class="g6 col-lg-2">
+                  <li><a href="pages/generalcontraction.html"><img src="imgs\logo.2.png" alt="General-Contraction"></a></li>
+                </ul>
+              </div> -->
+          </div>
+          <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L120,128C240,160,480,224,720,208C960,192,1200,96,1320,48L1440,0L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+          <div class="groups">
+            <div class="group g1">
+              <a href="pages/hr-consultancy.html"><img src="imgs\logo.4.png" alt="HR-consultaion-logo"></a>
+            </div>
+            <div class="group g2">
+              <a href="pages/mining-services.html"><img src="imgs\logo.6 (2).png" alt="Mining-Services-logo"></a>
+            </div>
+            <div class="group g3">
+              <a href="pages/advertising.html"><img src="imgs\logo.3 (2).png" alt="Advertising-logo"></a>
+            </div>
+            <div class="group g4">
+              <a href="pages/facilitymanagment.html"><img src="imgs\logo.1 (2).png" alt="Facility-Managment"></a>
+            </div>
+            <div class="group g5">
+              <a href="pages/generalsupplies.html"><img src="imgs\logo.5 (2).png" alt="General-Supplies"></a>
+            </div>
+            <div class="group g6">
+              <a href="pages/generalcontraction.html"><img src="imgs\logo.2.png" alt="General-Contraction"></a>
+            </div>
+          </div>
+        <!-- end header content -->
+      </div>
+    <!-- end header -->
+
+    <!-- start about us -->
+    <div class="about-us" id="about-us">
+      <div class="container">
+        <div class="row" style="align-items: center;">
+          <div class="about-us-content col-lg-6">
+            <h2 class="main-title">About Us</h2>
+            <p>We are committed to providing inspiring results and out-of-the-box HR solutions to fuel the growth of your organization.
+              <span>By choosing Mountain Group you are opting for subject matter experts who will save you and your staff time and allow you to concentrate more on your core business and revenue-generating activities...</span></p>
+          </div>
+          <div class="about-us-img col-lg-6">
+            <img src="imgs/About us Illustration.jpg" alt="about-us-photo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end about us -->
+    <!-- start vision -->
+    <div class="our-vision" id="our-vision">
+      <div class="container">
+        <h2 class="main-title">Our Vision</h2>
+        <p>To be the top HR value-added services provider in Egypt and the MEA
+          <span>ensuring the best service quality and shortest time of delivery, by focusing on our team’s continuous development and using the latest technological trends and scientifically proven methodologies.</span></p>
+      </div>
+    </div>
+    <!-- end vision -->
+    <!-- start our services -->
+    <div class="our-services" id="our-services">
+      <div class="">
+        <div class="row">
+          <div class="services-info col-lg-4">
+            <div class="info-container">
+              <h2 class="main-title">Our Services</h2>
+              <p>Assisting our customers source and hire the most qualified professionals in select and highly skilled occupations and we are empowered to deliver operational excellence through innovation and leadership at all levels, together we communicate on a personal level listening to the individual need and providing a choice of solution.</p>
+            </div>
+          </div>
+          <div class="services col-lg-8">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="service">
+                  <img src="imgs\outsourcing.jpg" alt="outsourcing-img">
+                  <h3>Out Sourcing</h3>
+                  <span>Full outsource</span>
+                  <span>Customized outsource</span>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="service">
+                  <img src="imgs\recruitment.jpg" alt="recruitment-img">
+                  <h3>Recruitment</h3>
+                    <span>White Collar (Entry level, Experience, Managerial level)</span>
+                    <span>Blue Collar</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="service">
+                  <img src="imgs\training.png" alt="training-img">
+                  <h3>Training & Development</h3>
+                  <span>Corporate Training (Soft Skills - Technical Skills)</span>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="service">
+                  <img src="imgs\hr-consultant.jpg" alt="hr-consultaion-img">
+                  <h3>HR Consultation</h3>
+                    <span>payroll Calculation</span>
+                    <span>Social insurance</span>
+                    <span>Labur low</span>
+                    <span>Organization Planning</span>
+                    <span>Salary Surveys</span>
+                    <span>TNA</span>
+                    <span>Job Analyses</span>
+                    <span>Performance Management System</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end our services -->
+    <!-- start our values -->
+    <div class="our-values" id="our-values">
+        <div class="container" >
+          <h2 class="main-title">Our Values</h2>
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-lg-2">
+              <div class="value">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Integrity</h3>
+                <p>Carry out our business with honesty</p>
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <div class="value">
+                <i class="far fa-handshake"></i>
+                <h3>Respect</h3>
+                <p>We treat all customers with respect and dignity</p>
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <div class="value">
+                <i class="fas fa-users"></i>
+                <h3>Team Work</h3>
+                <p>We are one team with one mission and one vision</p>
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <div class="value">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Supporting</h3>
+                <p>We never stop learning and sharing experiences</p>
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <div class="value">
+                <i class="far fa-lightbulb"></i>
+                <h3>Innovation</h3>
+                <p>Our approach is creating sustainable value for our clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- end our values -->
+    <!-- start contact -->
+    <div class="contact" id="contact">
+      <div class="container">
+        <h2 class="main-title">Contact Us</h2>
+        <form class="contact-us" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+          <div class="form-group required-field">
+            <i class="far fa-user"></i>
+            <input class="user-name" type="text" name="name" placeholder="Enter Your Name" value="<?php if (isset($user)) {echo $user;} ?>">
+            <span>*</span>
+            <div class="custom-alert">
+              <p>User name must be larger than <strong>3</strong> characters.</p>
+            </div>
+          </div>
+          <div class="form-group required-field">
+            <i class="fas fa-at"></i>
+            <input class="email" type="email" name="email" placeholder="Enter Your E-mail" value="<?php if (isset($mail)) {echo $mail;} ?>">
+            <span>*</span>
+            <div class="custom-alert">
+              <p>E-mail can not be <strong>Empty</strong>.</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <i class="fas fa-mobile-alt"></i>
+            <input type="text" name="mobile" placeholder="Enter Your Mobile Number" value="<?php if (isset($mobile)) {echo $mobile;} ?>">
+          </div>
+          <div class="form-group area required-field">
+            <i class="far fa-comment-alt text-area"></i>
+            <textarea class="textarea" name="message" rows="8" cols="80" placeholder="Enter Your Message"><?php if (isset($msg)) {echo $msg;} ?></textarea>
+            <span>*</span>
+            <div class="custom-alert">
+              <p>Message can not be less than <strong>10</strong> characters.</p>
+            </div>
+          </div>
+          <?php if (! empty($formErrors)) { ?>
+          <div class="errors">
+            <h6>
+              <?php
+                foreach($formErrors as $error) {
+                  echo $error . '<br/>';
+                }
+              ?>
+            </h6>
+          </div>
+          <?php } ?>
+          <?php if (isset($success)) { echo $success; } ?>
+          <input class="submit" type="submit" name="submit" value="Send">
+        </form>
+      </div>
+    </div>
+    <!-- end contact -->
+    <!-- start footer -->
+    <div class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="breif">
+              <img src="imgs/logo.png" alt="mountaingroups-logo">
+              <p>Mountain group of HR Professionals with a varied background in industries.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="contacts">
+              <div class="get-touch">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>ibrahim abou-elnaga street - front of Enbi company - 3rd floor</p>
+              </div>
+              <div class="get-touch">
+                <i class="fas fa-phone-alt"></i>
+                <p>02-22701710</p>
+              </div>
+              <div class="get-touch">
+                <i class="far fa-envelope"></i>
+                <p>info@mountaingroups.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="our-groups">
+              <a href="pages/hr-consultancy.html"><img src="imgs\logo.4.png" alt="HR-consultaion-logo"></a>
+              <a href="pages/mining-services.html"><img src="imgs\logo.6 (2).png" alt="Mining-Services-logo"></a>
+              <a href="pages/advertising.html"><img src="imgs\logo.3 (2).png" alt="Advertising-logo"></a>
+            </div>
+            <div class="our-groups">
+              <a href="pages/facilitymanagment.html"><img src="imgs\logo.1 (2).png" alt="Facility-Managment"></a>
+              <a href="pages/generalsupplies.html"><img src="imgs\logo.5 (2).png" alt="General-Supplies"></a>
+              <a href="pages/generalcontraction.html"><img src="imgs\logo.2.png" alt="General-Contraction"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="made-by">
+        <p>&copy2022 Made By <span><a href="#">Perfection</a></span> With <i class="far fa-heart"></i>.</p>
+      </div>
+    </div>
+    <!-- end footer -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
