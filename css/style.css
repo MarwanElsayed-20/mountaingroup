@@ -160,7 +160,7 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url("../imgs/depositphotos_71167559-stock-photo-human-resources-concept.jpg");
+  background-image: url("../imgs/HR-header.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -397,7 +397,7 @@ a {
   transition: var(--main-transition)
 }
 .header .wave.hr {
-  bottom: 0;
+  display: none;
 }
 .header .groups {
   display: flex;
@@ -456,7 +456,7 @@ a {
 }
 @media (max-width: 991.98px) {
   .header-content {
-    margin-top: 50px
+    margin-top: 0
   }
   .header-content .title {
     width: 90%;
@@ -469,8 +469,11 @@ a {
   }
   .header .wave {
     position: absolute;
-    height: 30%;
+    height: 45%;
     bottom: 0;
+  }
+  .header .wave.hr {
+    display: block;
   }
   .header .groups {
     display: none;
@@ -1046,6 +1049,17 @@ a {
   border-radius: 10px;
   border: 3px solid white;
 }
+.contact form .error {
+  background: red;
+  width: 49%;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 3px solid white;
+}
 @media (max-width: 991.98px) {
   .contact form .form-group i {
     left: auto;
@@ -1089,17 +1103,26 @@ a {
   color: var(--text-color);
   font-weight: bold;
 }
-.footer .contacts {
-
+.footer .breif i {
+  color: white;
+  font-size: 20px;
+  margin: 25px 0 0;
+  padding: 10px 13px;
+  background: #1877f2;
+  border-radius: 2px
+}
+.footer .breif i:hover {
+  box-shadow: 0 0 5px #1877f2;
 }
 .footer .contacts .get-touch {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 .footer .contacts .get-touch i {
   font-size: 25px;
   color: #129748;
+  margin-bottom: 16px;
 }
 .footer.hr .contacts .get-touch i {
     color: var(--hr-color);

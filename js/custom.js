@@ -1,17 +1,19 @@
 // loading
 $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+$('body').css('overflow-y', 'hidden');
 $(window).on('load', function(){
   setTimeout(removeLoader, 1000); //wait for page load PLUS one seconds.
 });
 function removeLoader(){
+  $('body').css('overflow-y', 'visible');
     $( "#loadingDiv" ).fadeOut(500, function() {
       // fadeOut complete. Remove the loading div
       $( "#loadingDiv" ).remove(); //makes page more lightweight
   });
 }
 
-const body = document.querySelector("body");
 
+const body = document.querySelector("body");
 // header animation
 if (body.classList.contains("home-page")) {
   const wave = document.querySelector(".header .wave");
@@ -23,7 +25,7 @@ if (body.classList.contains("home-page")) {
   if (document.readyState === 'loading') {  // Loading hasn't finished yet
     document.addEventListener('DOMContentLoaded', function(){
       setTimeout(headerAnimate, 1000);
-    });  ;
+    });
   } else {  // `DOMContentLoaded` has already fired
     headerAnimate();
   }
@@ -32,7 +34,7 @@ if (body.classList.contains("home-page")) {
 
 // sections animation
 if (body.classList.contains("hr-consultancy")) {
-
+  body.style.cssText = 'overflow-x: hidden';
   const aboutUs = document.querySelector(".about-us");
   const ourVision = document.querySelector(".our-vision");
   const ourMission = document.querySelector(".our-mission");
